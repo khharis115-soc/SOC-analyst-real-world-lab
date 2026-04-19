@@ -28,3 +28,56 @@ Logs confirmed multiple connections from IP 10.0.2.6.Compromise Confirmation: Th
 <img width="1280" height="800" alt="VirtualBox_ubuntu _18_04_2026_19_13_13" src="https://github.com/user-attachments/assets/992834d2-dd29-47f9-a595-b371c729b1a9" />
 
 <img width="1280" height="800" alt="VirtualBox_ubuntu _18_04_2026_19_29_15" src="https://github.com/user-attachments/assets/78894b25-0d7c-408c-affe-402b2d39451e" />
+
+
+## SOC Lab: Real-time Security Event Streaming with Syslog & Splunk
+## 1. Lab Overview
+This lab demonstrates how to configure centralized logging using the Syslog protocol. It involves setting up a listener on Splunk and configuring a remote host to stream its system logs for real-time security monitoring.
+
+## 2. Network Configuration
+Victim (Metasploitable 2): 10.0.2.5
+
+SIEM (Splunk on Ubuntu): 10.0.2.6
+
+Protocol/Port: UDP / 514
+
+## 3. Technical Implementation
+## Step 1: Splunk Data Input Setup
+Navigated to Settings > Data Inputs in Splunk.
+
+Created a new UDP Input on Port 514.
+
+Set the Source Type to syslog to ensure proper parsing of incoming data.
+
+## Step 2: Victim Syslog Configuration
+Edited the syslog configuration file on Metasploitable: nano /etc/syslog.conf.
+
+Added the following line to forward all logs to the SIEM:
+*.* @10.0.2.6:514
+
+Restarted the syslog service to apply changes.
+
+## Step 3: Verification (The "Test" Event)
+To verify the connection, a manual test message was sent from the victim machine:
+
+Bash
+echo "test" | nc -u -w1 10.0.2.6 514
+## 4. Data Analysis in Splunk
+By executing the search query:
+source="udp:514" sourcetype="syslog"
+
+The SIEM successfully captured the "test" events originating from host 10.0.2.5. Each event was timestamped and indexed, proving the integrity of the logging pipeline.
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_03_51" src="https://github.com/user-attachments/assets/2ae5e9f4-764c-42a0-ad9b-684bb3734c50" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_06_20" src="https://github.com/user-attachments/assets/4130452a-bada-4061-8020-53bc3c8b0ce7" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_06_47" src="https://github.com/user-attachments/assets/e8bd1a20-1cbf-46a2-8fd5-0dacf0dc24a3" />
+
+<img width="720" height="400" alt="VirtualBox_metasploitable_19_04_2026_16_19_14" src="https://github.com/user-attachments/assets/70c82260-f595-461b-8524-bfa1116e358f" />
+
+<img width="720" height="400" alt="VirtualBox_metasploitable_19_04_2026_16_18_44" src="https://github.com/user-attachments/assets/dc131572-0dd7-41a5-a5b5-f95747e02c96" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_15_06" src="https://github.com/user-attachments/assets/618b580b-9f23-4993-b300-871e0d4e8b3d" />
+
+
