@@ -68,15 +68,21 @@ source="udp:514" sourcetype="syslog"
 
 The SIEM successfully captured the "test" events originating from host 10.0.2.5. Each event was timestamped and indexed, proving the integrity of the logging pipeline.
 
+
 <img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_03_51" src="https://github.com/user-attachments/assets/2ae5e9f4-764c-42a0-ad9b-684bb3734c50" />
+
 
 <img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_06_20" src="https://github.com/user-attachments/assets/4130452a-bada-4061-8020-53bc3c8b0ce7" />
 
+
 <img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_06_47" src="https://github.com/user-attachments/assets/e8bd1a20-1cbf-46a2-8fd5-0dacf0dc24a3" />
+
 
 <img width="720" height="400" alt="VirtualBox_metasploitable_19_04_2026_16_19_14" src="https://github.com/user-attachments/assets/70c82260-f595-461b-8524-bfa1116e358f" />
 
+
 <img width="720" height="400" alt="VirtualBox_metasploitable_19_04_2026_16_18_44" src="https://github.com/user-attachments/assets/dc131572-0dd7-41a5-a5b5-f95747e02c96" />
+
 
 <img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_15_06" src="https://github.com/user-attachments/assets/618b580b-9f23-4993-b300-871e0d4e8b3d" />
 
