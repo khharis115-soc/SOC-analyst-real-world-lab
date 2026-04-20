@@ -145,3 +145,52 @@ To develop a centralized monitoring system that detects suspicious FTP login att
 <img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_15_49" src="https://github.com/user-attachments/assets/b4759917-bfa7-4426-9c41-ce41cbcb00d2" />
 
 <img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_23_20" src="https://github.com/user-attachments/assets/8d9370d9-6cd2-4538-bde8-45e6f1307444" />
+
+
+
+## Brute Force Login Detection using Suricata
+## Project Overview
+The objective of this project is to detect SSH and FTP brute force attacks using Suricata IDS. It demonstrates how an Intrusion Detection System monitors suspicious network traffic and generates alerts for repeated login attempts.
+## Tools Used Monitoring System: 
+Ubuntu Server with Suricata IDS.Attacker Machine: Kali Linux using Hydra.
+## Victim Machine: 
+Metasploitable 2 (SSH & FTP services).
+## Analysis Tools: 
+Linux Command Line (grep, tail, jq).
+## Implementation StepsEnvironment: 
+Three VMs connected via a NAT Network.Configuration: Configured Suricata on enp0s3 interface and updated detection rules.Attack: Simulated brute force attacks from Kali Linux against the victim IP.
+## Detection:
+Analyzed real-time alerts in fast.log and eve.json.
+## Key Findings
+Suricata successfully detected both SSH and FTP brute force attempts.Alerts correctly identified the attacker's IP and the targeted services.Confirmed the effectiveness of IDS in protecting against unauthorized access.
+
+<img width="918" height="516" alt="image" src="https://github.com/user-attachments/assets/af48fbf3-1725-47b7-90fc-e754d63b1f75" />
+
+<img width="811" height="456" alt="image" src="https://github.com/user-attachments/assets/d312b964-2b15-40bf-8dde-ab8323d4179e" />
+
+<img width="875" height="492" alt="image" src="https://github.com/user-attachments/assets/e75a96d7-5f60-451d-86d4-73743dd887c2" />
+
+<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/005242c1-18b0-4fa2-985c-13b5fe04b80a" />
+
+<img width="825" height="1019" alt="image" src="https://github.com/user-attachments/assets/7e3ae47e-68f3-45d6-a58e-053c3e3c568e" />
+
+<img width="780" height="488" alt="image" src="https://github.com/user-attachments/assets/4bfcf09c-4a71-4597-b7be-f27388d95cfb" />
+
+<img width="770" height="481" alt="image" src="https://github.com/user-attachments/assets/92fcdebc-88d9-40ae-8e3a-fb4ba08cb451" />
+
+<img width="840" height="525" alt="image" src="https://github.com/user-attachments/assets/e9533d30-1276-4660-8859-ca8023700685" />
+
+<img width="840" height="525" alt="image" src="https://github.com/user-attachments/assets/aae755b9-975a-4264-ac7c-a1a5d786f10d" />
+
+<img width="820" height="512" alt="image" src="https://github.com/user-attachments/assets/74b82e46-3fec-43f8-9f15-74eb8e0ed941" />
+
+<img width="810" height="450" alt="image" src="https://github.com/user-attachments/assets/5f2e4015-98b3-43c7-a8a7-0ef5c2d4ef36" />
+
+<img width="970" height="728" alt="image" src="https://github.com/user-attachments/assets/6c61307f-d1bf-4cf1-a43e-5b4cb52a798f" />
+
+<img width="980" height="735" alt="image" src="https://github.com/user-attachments/assets/a4984171-c6a4-4c8d-b656-481a6cc20734" />
+
+<img width="980" height="613" alt="image" src="https://github.com/user-attachments/assets/9b6b29d2-df96-4055-a695-d953d04ea32e" />
+
+ <img width="981" height="1226" alt="image" src="https://github.com/user-attachments/assets/c1f965bf-cda7-4311-9805-e7dd7fde9c21" />
+
