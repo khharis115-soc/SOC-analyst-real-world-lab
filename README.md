@@ -87,3 +87,61 @@ The SIEM successfully captured the "test" events originating from host 10.0.2.5.
 <img width="1280" height="800" alt="VirtualBox_ubuntu _19_04_2026_16_15_06" src="https://github.com/user-attachments/assets/618b580b-9f23-4993-b300-871e0d4e8b3d" />
 
 
+
+# Telecom Infrastructure Security Monitoring: Threat Detection & Correlation Lab
+
+## Project Overview
+This lab simulates a Security Operations Center (SOC) environment tailored for a telecom billing infrastructure. It focuses on correlating network reconnaissance activities with potential unauthorized access attempts to detect and visualize security threats using Splunk.
+
+## Objective
+To develop a centralized monitoring system that detects suspicious FTP login attempts correlated with Nmap network scanning, providing actionable intelligence for security analysts.
+
+## Key Features
+- *Data Ingestion:* Processed real-time FTP logs (vsftpd) and network scan outputs (Nmap XML data) into Splunk.
+- *Threat Detection:* Configured search queries to identify Brute-Force login attempts.
+- *Correlation Logic:* Correlated Nmap reconnaissance activity with subsequent FTP login failures to identify active attackers.
+- *Visualization:* Created a real-time SOC Dashboard to visualize threat trends and attack patterns.
+
+## Technologies Used
+- *SIEM:* Splunk Enterprise
+- *Security Tools:* Nmap (Network Scanner), Kali Linux
+- *OS:* Ubuntu (Splunk Server), Kali Linux (Attacker VM)
+- *Log Source:* vsftpd (FTP Server)
+
+## Methodology
+1. *Lab Setup:* Established an isolated virtual environment using VirtualBox.
+2. *Log Collection:* Forwarded system logs to Splunk for centralized analysis.
+3. *Attack Simulation:* Performed network scanning and FTP brute-force simulations.
+4. *Data Correlation:* Utilized SPL (Splunk Processing Language) to parse and correlate disparate log sources.
+5. *Visualization:* Built dashboards to monitor MTTR (Mean Time To Detect) and threat alerts.
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_36_36" src="https://github.com/user-attachments/assets/26ace73b-d1e5-422d-ae19-da578b6c11ba" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_36_56" src="https://github.com/user-attachments/assets/55555f29-998b-442f-a98a-925198fb6b40" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_38_48" src="https://github.com/user-attachments/assets/d7763b6d-2222-4766-8f67-39fd47d55101" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_44_56" src="https://github.com/user-attachments/assets/c629efd2-37df-441d-8572-f27bf2d8c53c" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_47_32" src="https://github.com/user-attachments/assets/eaaf20f7-5c49-479a-976b-89fb2de8d834" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_52_29" src="https://github.com/user-attachments/assets/a91f41e0-e386-4365-9a06-5b3c2843cbae" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_10_57_15" src="https://github.com/user-attachments/assets/cb2b23d6-d010-47bb-9692-3042634a60ad" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_11_08_10" src="https://github.com/user-attachments/assets/8e3bcdb2-ff81-4e37-b7c4-ce746bbd01d9" />
+
+## nmap detetion
+<img width="1366" height="643" alt="VirtualBox_kalilinux_20_04_2026_11_44_07" src="https://github.com/user-attachments/assets/3142d067-9976-4b9d-8508-d92a1fd62f04" />
+
+<img width="1366" height="643" alt="VirtualBox_kalilinux_20_04_2026_11_48_47" src="https://github.com/user-attachments/assets/84e0b65b-12cd-4eb5-92e6-e34038551a70" />
+
+<img width="1366" height="643" alt="VirtualBox_kalilinux_20_04_2026_12_02_31" src="https://github.com/user-attachments/assets/008cf626-575b-4a80-8337-276b4a4822c8" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_08_07" src="https://github.com/user-attachments/assets/00e5b588-3431-436e-97d4-4c26b299c06f" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_10_24" src="https://github.com/user-attachments/assets/7d6090db-f805-4e96-af86-b0de0932ce82" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_15_49" src="https://github.com/user-attachments/assets/b4759917-bfa7-4426-9c41-ce41cbcb00d2" />
+
+<img width="1280" height="800" alt="VirtualBox_ubuntu _20_04_2026_12_23_20" src="https://github.com/user-attachments/assets/8d9370d9-6cd2-4538-bde8-45e6f1307444" />
